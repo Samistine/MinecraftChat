@@ -25,7 +25,7 @@ module.exports = function($scope, socket, servers) {
       socket.emit('server:connect', {
         username: $scope.username,
         password: $scope.password,
-        hostname: 'latty.info',
+        hostname: 'us.latty.info',
         port: 25565
       });
 
