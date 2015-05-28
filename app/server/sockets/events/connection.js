@@ -24,12 +24,18 @@ export default (socket) => {
 
 
     // create a mineflayer bot and store it in the client's socket
-    socket.mcbot = mineflayer.createBot({
+    /*socket.mcbot = mineflayer.createBot({
       host:       data.hostname,
       port:       data.port,
       username:   data.username,
       password:   data.password
-    });
+    });*/
+    socket.mcbot = mineflayer.createBot({
+      host:         data.hostname,
+      port:         data.port,
+      clientToken:  data.clientToken,
+      accessToken:  data.accessToken
+    })
 
 
     // store connection params in socket
