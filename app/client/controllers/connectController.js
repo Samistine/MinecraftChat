@@ -4,18 +4,6 @@
 
 module.exports = function($scope, socket, servers) {
 
-  $scope.servers = servers.get();
-
-  $scope.select = function(id) {
-    $scope.ip = servers.select(id).ip;
-    $scope.port = servers.select(id).port;
-
-    if ($scope.username.length > 0 && $scope.password.length > 0) {
-      $scope.connect();
-    }
-
-  };
-
   // connect handler
   $scope.connect = function() {
     $('#connectModal').modal('hide');
@@ -26,10 +14,12 @@ module.exports = function($scope, socket, servers) {
         console.log('Sending');
         console.log('ClientToken: ' + $scope.clientToken);
         console.log('AccessToken: ' + $scope.accessToken);
-        console.log('To : ' + $scope.ip + $scope.port);
+        //console.log('To : ' + $scope.ip + $scope.port);
         socket.emit('server:connect', {
-          hostname: $scope.ip,
-          port: $scope.port,
+          //hostname: $scope.ip,
+          //port: $scope.port,
+          hostname: 'samistine.com',
+          port:     '25565',
           clientToken: $scope.clientToken,
           accessToken: $scope.accessToken
         });

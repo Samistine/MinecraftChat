@@ -13,7 +13,9 @@ module.exports = function($scope, socket) {
     var players = [];
 
     for (var player in data) {
-      players.push(player);
+      if (player.substring(0, 8) != '0000tab#') {
+        players.push(player);
+      }
     }
 
     $scope.$apply(function() {
