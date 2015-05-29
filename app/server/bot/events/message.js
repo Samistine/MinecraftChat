@@ -37,7 +37,7 @@ export default (socket) => {
 
     // format the buffer with the correct coloring and format whitespace
     buffer = buffer.replace(/§([0-9abcdef])([^§]*)/ig, (regex, color, msg) => {
-      msg = msg.replace(/ /g, '&nbsp;');
+      //msg = msg.replace(/ /g, '&nbsp;'); SAM: We wan't lines to break
       return `<span class="color-${color}">${msg}</span>`;
     });
 

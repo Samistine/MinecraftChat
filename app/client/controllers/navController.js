@@ -1,7 +1,7 @@
 /**
  * Connect Controller
  */
-
+/*
 module.exports = function($scope, socket) {
 
   $scope.connected = false;
@@ -32,3 +32,4 @@ module.exports = function($scope, socket) {
   };
 
 };
+*/
