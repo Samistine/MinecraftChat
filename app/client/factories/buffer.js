@@ -37,7 +37,8 @@ module.exports = function(socket, sound) {
   });
 
   socket.on('bot:message', function(string) {
-    $('#buffer').append(string + '<br>');
+    $('#buffer').append(string + '<br></b>');
+    //if (string.to) //TODO: If string contains username, then ding user
     $('#buffer').scrollTop($('#buffer').prop('scrollHeight'));
   });
 

@@ -16,23 +16,18 @@
   <link rel="stylesheet" href="//bootswatch.com/cyborg/bootstrap.min.css">
   <link rel="stylesheet" href="/css/style.css">
   <script>
-    function openLoginBox() {
-      $('#connectModal').modal('show');
-    }
-    function closeLoginBox() {
-      $('#connectModal').modal('hide');
-    }
     function onLoad() {
       setTimeout(function() {
         Android.toast('Connecting');
         //openLoginBox();
-        //document.getElementById('sam11').click();
+        document.getElementById('connectBtn').click();
+        
         //closeLoginBox();
         //Android.toast('Connected');
         // VERY VERY ugly hack
-        angular.element(document.getElementById('connectModal')).scope().connectSam();
+        //angular.element(document.getElementById('connectModal')).scope().connectSam();
         //$scope.connectController.connectSam();
-      }, 100);
+      }, 300);
     }
   </script>
 </head>
@@ -89,7 +84,6 @@
       <input type="submit" value="Chat">
     </div>
   </form>
-
 
   <!-- scripts -->
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>

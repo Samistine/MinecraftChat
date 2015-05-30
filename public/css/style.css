@@ -112,3 +112,7 @@ a {
 a:hover {
   color: inherit;
 }
+
+hidden {
+  visibility: hidden;
+}
